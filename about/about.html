@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About - Future India</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    background: #020617;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo img {
+    height: 80px;
+    width: 80px;           /* make width same as height */
+    border-radius: 50%;    /* makes it round */
+    object-fit: cover;     /* prevents stretching */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+/* FIXED DROPDOWN (no gap) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;   /* 👈 key fix */
+    left: 0;
+    background: #1e293b;
+    min-width: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* LINKS */
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.dropdown-content a:hover {
+    background: #334155;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* OPTIONAL: hover bridge (prevents flicker completely) */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    bottom: -10px;
+}
+
+/* HERO */
+.about-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 40px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* CARD SECTION */
+.about-cards {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* TEXT */
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5f5;
+    line-height: 1.6;
+}
+
+/* LIST */
+.card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* LINKS */
+.card a {
+    color: #22c55e;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    padding: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    margin-bottom: 10px;
+}
+
+.footer-box a {
+    display: block;
+    color: #cbd5f5;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-box a:hover {
+    color: #22c55e;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <a href="index.html" class="logo">
+    <img src="../images/logo.jpg">
+</a>
+
+    <nav>
+        <a href="about.html">About</a>
+
+        <div class="dropdown">
+            <a href="#">Explore ▼</a>
+            <div class="dropdown-content">
+                <a href="swimming.html">Swimming</a>
+                <a href="badminton.html">Badminton</a>
+                <a href="turf.html">Cricket / Football</a>
+                <a href="gym.html">Gym</a>
+                <a href="martial-arts.html">Martial Arts</a>
+                <a href="Summer-Camp.html">Summer Camp</a>
+            </div>
+        </div>
+
+        <a href="membership.html">Memberships</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+    <h1>About Future India</h1>
+</section>
+
+<!-- CARDS -->
+<section class="about-cards">
+
+    <div class="card">
+        <h2>Who We Are</h2>
+        <p>
+            Future India Sports Club is one of Aurangabad’s leading sports and
+            fitness destinations. With modern infrastructure and expert coaching,
+            we provide a complete environment for athletes, beginners, and fitness
+            enthusiasts to train, grow, and perform at their best.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to promote a healthy and active lifestyle by offering
+            high-quality training, safe facilities, and a motivating atmosphere.
+            We aim to build discipline, confidence, and strength through sports.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Our Facilities</h2>
+        <p>
+            We offer multiple sports under one roof including swimming, badminton,
+            turf sports (cricket & football), gymnastics, martial arts, and a
+            fully equipped modern gym. Our facilities are designed for all age
+            groups and skill levels.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Why Choose Us</h2>
+
+        <ul>
+            <li>✔ Safe environment for women</li>
+            <li>✔ Separate swimming timings for women</li>
+            <li>✔ Interactive and playful sessions for kids</li>
+            <li>✔ Modern gym equipment</li>
+            <li>✔ Clean and hygienic facilities</li>
+            <li>✔ Experienced and supportive coaches</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Follow us on Instagram</h2>
+
+        <p style="margin-top:15px;">
+            <a href="https://www.instagram.com/futureindiafitindia/" target="_blank">Future India</a> |
+            <a href="https://www.instagram.com/future_india_2.0/" target="_blank">Future India 2.0</a>
+        </p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Branches</h3>
+            <p>Future India - Mahmoodpura</p>
+            <p>Future India 2.0 - Beed Bypass</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="../swimming/swimming.html">Swimming</a>
+            <a href="../badminton/badminton.html">Badminton</a>
+            <a href="../gym/gym.html">Gym</a>
+            <a href="../membership/membership.html">Memberships</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Social Media</h3>
+            <a href="https://www.instagram.com/futureindiafitindia/" target="_blank">Future India</a>
+            <a href="https://www.instagram.com/future_india_2.0/" target="_blank">Future India 2.0</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Aurangabad, Maharashtra</p>
+            <p>+91 9130999503</p>
+            <p>+91 9373031300</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
