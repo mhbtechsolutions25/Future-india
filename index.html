@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future India | Biggest Sports Club Chain in Aurangabad</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    background: #020617;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo img {
+    height: 80px;
+    width: 80px;           /* make width same as height */
+    border-radius: 50%;    /* makes it round */
+    object-fit: cover;     /* prevents stretching */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+/* FIXED DROPDOWN (no gap) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;   /* 👈 key fix */
+    left: 0;
+    background: #1e293b;
+    min-width: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* LINKS */
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.dropdown-content a:hover {
+    background: #334155;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* OPTIONAL: hover bridge (prevents flicker completely) */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    bottom: -10px;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: linear-gradient(to right, #0ea5e9, #22c55e);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero {
+    height: 80vh;
+
+    /* Background image */
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+/* ABOUT */
+.about {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 15px;
+    color: #cbd5f5;
+}
+
+/* SLIDER */
+.slider {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(250px * 8);
+    animation: scroll 20s linear infinite;
+}
+
+.slider-track img {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* ANIMATION */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* FEATURES */
+.features {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.feature-box {
+    display: inline-block;
+    background: #1e293b;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    width: 220px;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    padding: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    margin-bottom: 10px;
+}
+
+.footer-box a {
+    display: block;
+    color: #cbd5f5;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-box a:hover {
+    color: #22c55e;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <a href="index.html" class="logo">
+    <img src="images/logo.jpg" alt="Future India Logo">
+</a>
+
+    <nav>
+        <a href="../about/about.html">About</a>
+
+        <div class="dropdown">
+            <a href="#">Explore ▼</a>
+            <div class="dropdown-content">
+                <a href="/swimming/">Swimming</a>
+                <a href="/badminton/">Badminton</a>
+                <a href="/turf/">Cricket / Football</a>
+                <a href="/gymnastics/">Gymnastics</a>
+                <a href="/gym/">Gym</a>
+                <a href="/martial-arts/">Martial Arts</a>
+            </div>
+        </div>
+
+        <a href="/membership/">Memberships</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Train Like a Champion</h1>
+    <p>Biggest Sports Club Chain in Aurangabad </p>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About Future India</h2>
+    <p>
+        Future India Sports Club is a premier destination for sports and fitness in Aurangabad.
+        With world-class facilities and expert coaching, we provide training across multiple
+        disciplines including swimming, badminton, cricket, gymnastics, and martial arts.
+        Whether you're a beginner or a professional, we help you grow, perform, and succeed.
+    </p>
+</section>
+
+<!-- IMAGE SLIDER -->
+<section class="slider">
+    <h2>Our Facilities</h2>
+
+    <div class="slider-container">
+        <div class="slider-track">
+
+            <img src="images/turf1.jpg">
+            <img src="images/turf2.jpg">
+            <img src="images/turf3.jpg">
+            <img src="images/turf4.jpg">
+            <img src="images/swimming1.jpg">
+            <img src="images/swimming2.jpg">
+            <img src="images/badminton1.jpg">
+            <img src="images/badminton2.jpg">
+            <img src="images/gym1.jpg">
+            <img src="images/gym2.jpg">
+            <img src="images/summer1.jpg">
+            <img src="images/summer2.jpg">
+
+            <!-- Duplicate for smooth loop -->
+            <img src="images/turf1.jpg">
+            <img src="images/turf2.jpg">
+            <img src="images/turf3.jpg">
+            <img src="images/turf4.jpg">
+            <img src="images/swimming1.jpg">
+            <img src="images/swimming2.jpg">
+            <img src="images/badminton1.jpg">
+            <img src="images/badminton2.jpg">
+            <img src="images/gym1.jpg">
+            <img src="images/gym2.jpg">
+            <img src="images/summer1.jpg">
+            <img src="images/summer2.jpg">
+
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Our Features</h2>
+
+    <div class="feature-box">✔ Modern Gym Equipment</div>
+    <div class="feature-box">✔ Professional Coaches</div>
+    <div class="feature-box">✔ Multiple Sports Facilities</div>
+    <div class="feature-box">✔ Kids & Adult Training</div>
+    <div class="feature-box">✔ Safe & Clean Environment</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Branches</h3>
+            <p>Future India - Mahmoodpura</p>
+            <p>Future India 2.0 - Beed Bypass</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="/swimming/">Swimming</a>
+            <a href="/badminton/">Badminton</a>
+            <a href="/gym/">Gym</a>
+            <a href="/membership/">Memberships</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Social Media</h3>
+            <a href="https://www.instagram.com/futureindiafitindia/" target="_blank">Future India</a>
+            <a href="https://www.instagram.com/future_india_2.0/" target="_blank">Future India 2.0</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Aurangabad, Maharashtra</p>
+            <p>+91 9130999503</p>
+            <p>+91 9373031300</p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
